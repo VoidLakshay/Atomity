@@ -1,7 +1,9 @@
+import { CloudSection } from "@/features/cloud/CloudSection";
+
 export default function Home() {
   return (
     <main>
-      <div>Hello world!</div>
+      <CloudSection />
     </main>
   );
 }
