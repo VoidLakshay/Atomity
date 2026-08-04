@@ -14,25 +14,32 @@ export const svgPathVariants: Variants = {
   visible: { 
     pathLength: 1, 
     opacity: 1, 
-    transition: { duration: 0.8, ease: 'easeInOut', delay: 0.3 }
+    transition: { duration: 1, ease: 'easeInOut', delay: 1.0 }
   }
 };
 
 export const dashboardVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.96 },
+  hidden: { opacity: 0, scale: 0.5 },
   visible: { 
     opacity: 1, 
     scale: 1, 
-    transition: { type: 'spring', stiffness: 200, damping: 20, delay: 0.8 }
+    transition: { type: 'spring', stiffness: 200, damping: 20, delay: 1.6 }
   }
 };
 
 export const nodeVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.96 },
-  visible: (custom: number) => ({
+  hidden: { opacity: 0, scale: 0.5, top: "50%", left: "50%" },
+  visible: (custom: { top: string, left: string, delay: number }) => ({
     opacity: 1, 
     scale: 1, 
-    transition: { duration: 0.4, ease: 'easeOut', delay: 1.0 + (custom * 0.1) }
+    top: custom.top,
+    left: custom.left,
+    transition: { 
+      opacity: { duration: 0.4, delay: 0.2 + custom.delay },
+      scale: { type: "spring", stiffness: 200, damping: 15, delay: 0.2 + custom.delay },
+      top: { type: "spring", stiffness: 100, damping: 18, delay: 1.0 },
+      left: { type: "spring", stiffness: 100, damping: 18, delay: 1.0 }
+    }
   })
 };
 

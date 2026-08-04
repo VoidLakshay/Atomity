@@ -36,3 +36,30 @@ body {
   color: var(--color-foreground);
   font-family: var(--font-sans);
 }
+
+@keyframes drift {
+  0% { transform: translate(-50%, -50%) translate(0, 0); }
+  33% { transform: translate(-50%, -50%) translate(30px, -50px); }
+  66% { transform: translate(-50%, -50%) translate(-20px, 20px); }
+  100% { transform: translate(-50%, -50%) translate(0, 0); }
+}
+
+@keyframes drift-alt {
+  0% { transform: translate(-50%, -50%) translate(0, 0); }
+  33% { transform: translate(-50%, -50%) translate(-40px, 30px); }
+  66% { transform: translate(-50%, -50%) translate(20px, -20px); }
+  100% { transform: translate(-50%, -50%) translate(0, 0); }
+}
+
+@keyframes drift-reverse {
+  0% { transform: translate(0, 0); }
+  33% { transform: translate(20px, 40px); }
+  66% { transform: translate(-30px, -10px); }
+  100% { transform: translate(0, 0); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-drift-slow { animation: drift 25s ease-in-out infinite; }
+  .animate-drift-slower { animation: drift-alt 30s ease-in-out infinite; }
+  .animate-drift-reverse { animation: drift-reverse 20s ease-in-out infinite; }
+}
