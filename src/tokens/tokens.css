@@ -1,11 +1,16 @@
 :root {
   /* Colors */
-  --color-background: #ffffff;
-  --color-foreground: #020617;
-  --color-primary: #2563eb;
-  --color-primary-hover: #1d4ed8;
-  --color-secondary: #f1f5f9;
-  --color-secondary-hover: #e2e8f0;
+  --color-background: #09090b;
+  --color-foreground: #fafafa;
+  --color-primary: #fafafa;
+  --color-primary-hover: #d4d4d8;
+  --color-secondary: #18181b;
+  --color-secondary-hover: #27272a;
+  
+  --color-muted: #a1a1aa;
+  --color-border: #27272a;
+  --color-border-subtle: #3f3f46;
+  --color-border-strong: #52525b;
   
   /* Spacing */
   --spacing-xs: 0.25rem;

@@ -8,6 +8,10 @@
   --color-primary-hover: var(--color-primary-hover);
   --color-secondary: var(--color-secondary);
   --color-secondary-hover: var(--color-secondary-hover);
+  --color-muted: var(--color-muted);
+  --color-border: var(--color-border);
+  --color-border-subtle: var(--color-border-subtle);
+  --color-border-strong: var(--color-border-strong);
 
   --spacing-xs: var(--spacing-xs);
   --spacing-sm: var(--spacing-sm);
