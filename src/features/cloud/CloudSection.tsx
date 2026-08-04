@@ -83,11 +83,7 @@ export function CloudSection() {
         </div>
 
         <motion.dl variants={kpiContainerVariants} className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
-          {isLoading ? (
-            <div className="col-span-1 md:col-span-3 flex items-center justify-center p-8 rounded-2xl border border-border bg-background shadow-sm">
-              <span className="text-sm font-medium text-muted">Loading metrics...</span>
-            </div>
-          ) : isError ? (
+          {isLoading ? null : isError ? (
             <div className="col-span-1 md:col-span-3 flex items-center justify-center p-8 rounded-2xl border border-border bg-background shadow-sm">
               <span className="text-sm font-medium text-red-500">Failed to load metrics.</span>
             </div>
